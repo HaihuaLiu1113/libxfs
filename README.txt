@@ -4,3 +4,5 @@ libxfs
 	base
 	net
 1. I write pthread	
+
+2. I write singleton
