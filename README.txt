@@ -9,3 +9,4 @@ libxfs
 3. singleton
 4. singleton next
 5. 123455
+6.11111111111111
