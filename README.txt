@@ -6,3 +6,5 @@ libxfs
 1. I write pthread	
 
 2. I write singleton
+3. singleton
+4. singleton next
