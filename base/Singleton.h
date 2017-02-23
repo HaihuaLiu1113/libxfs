@@ -6,7 +6,6 @@ class Singleton
 {
 public:
 	static T* GetInstance();
-	
 
 private:
 	Singleton(){}
