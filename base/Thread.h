@@ -1,3 +1,5 @@
+#ifndef Thread_H
+#define Thread_H
 #include <pthread.h>
 #include <functional>
 #include <memory>
@@ -40,3 +42,5 @@ private:
 	int threadStatus_;
 	ThreadFunc callBack_;
 };
+
+#endif /*Thread_H*/

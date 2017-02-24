@@ -6,7 +6,7 @@ void run(int a)
 	cout<<detail::GetTid()<<endl;
 	cout<<"run a thread "<< a <<endl;
 }
-int main(int argc, char const *argv[])
+int mainqwqe(int argc, char const *argv[])
 {
 	Thread th(bind(run,10));
 	th.Start();

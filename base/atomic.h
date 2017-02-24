@@ -1,3 +1,5 @@
+#ifndef Atomic_H
+#define Atomic_H
 #include <stdint.h>
 template <typename T>
 class Atomic
@@ -28,3 +30,5 @@ public:
 private:
 volatile T val_;
 };
+
+#endif /*Atomic_H*/

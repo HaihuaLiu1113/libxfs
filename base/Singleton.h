@@ -1,11 +1,15 @@
+#ifndef Singleton_H
+#define Singleton_H
+
 #include <pthread.h>
 #include <stdlib.h>
- #include <assert.h>
+#include <assert.h>
 template<typename T>
 class Singleton
 {
 public:
 	static T* GetInstance();
+	
 
 private:
 	Singleton(){}
@@ -46,3 +50,5 @@ void Singleton<T>::Destroy_()
 	delete singleton_t;
 	singleton_t = NULL;
 }
+
+#endif /*Singleton_H*/

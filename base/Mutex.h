@@ -1,11 +1,15 @@
+#ifndef Mutex_H
+#define Mutex_H
 #include <bits/pthreadtypes.h>
 #include <assert.h>
+#include <iostream>
 class Mutex
 {
 public:
 	Mutex()
 	{
-		pthread_mutex_init(&mutex_, NULL);
+		int ret = pthread_mutex_init(&mutex_, NULL);
+		assert(ret == 0);
 	}
 	~Mutex()
 	{
@@ -13,13 +17,13 @@ public:
 		assert(ret == 0);
 	}
 
-	void lock()
+	void Lock()
 	{
 		 int ret = pthread_mutex_lock(&mutex_);
 		 assert(ret == 0);
 	}
 
-	void unlock()
+	void Unlock()
 	{
 		int ret = pthread_mutex_unlock(&mutex_);
 		assert(ret == 0);
@@ -38,13 +42,15 @@ class MutexLock
 public:
 	MutexLock(Mutex& mutex):mutex_(mutex)
 	{
-		mutex_.lock();
+		mutex_.Lock();
 	}
 
 	~MutexLock()
 	{
-		mutex_.unlock();
+		mutex_.Unlock();
 	}
 private:
 	Mutex& mutex_;
 };
+
+#endif /*Mutex_H*/
